@@ -1,38 +1,52 @@
-📊 Dashboard de Indicadores de Recursos Humanos – Proyecto de Portafolio
+# 📊 Dashboard de Recursos Humanos en Power BI
 
-Descripción:
-Este proyecto surge como parte de mi proceso de transición profesional desde Recursos Humanos hacia el mundo del análisis de datos. Durante años trabajé gestionando personas, procesos y decisiones estratégicas… pero siempre sentí que los datos podían aportar más claridad y respaldo a esas decisiones.
+Este proyecto muestra cómo construir un **Dashboard de Recursos Humanos (RRHH)** usando **Power BI** con datos simulados.
+Incluye métricas clave, paneles visuales y buenas prácticas de modelado de datos.
 
-Objetivo del proyecto:
-Diseñar un dashboard en Power BI que visualice de forma clara y dinámica los principales KPIs de Recursos Humanos, con foco en:
+---
 
-Rotación de personal
+## 📂 Archivos incluidos
 
-Ausentismo
+- `base_datos_rrhh_simulada.xlsx` → Dataset de empleados simulados (200 registros)
+- `base_datos_rrhh_simulada_1000.xlsx` → Dataset de empleados simulados (1000 registros)
+- `tabla_fechas_calendar.xlsx` → Tabla de fechas (Calendar) para modelado en Power BI
+- `Pack_Medidas_DAX_RRHH.txt` → Medidas DAX listas para copiar en Power BI
 
-Antigüedad y edad promedio
+---
 
-Distribución por género y áreas
+## 🛠️ Pasos principales para el Dashboard
 
-Público objetivo:
-Gerencias de RRHH, líderes de equipo y analistas que necesiten tomar decisiones basadas en datos de personal.
+1. **Cargar datos en Power BI**
+   - Abrir Power BI Desktop
+   - `Obtener datos` → `Excel`
+   - Importar `base_datos_rrhh_simulada_1000.xlsx`
+   - Cargar también `tabla_fechas_calendar.xlsx`
 
-🛠️ Herramientas utilizadas:
+2. **Transformar datos (Power Query)**
+   - Asegurar tipos correctos (fechas, números, texto)
+   - Limpiar columna `Asistencia_Mensual` (convertir a número)
+   - Revisar columnas de antigüedad y fechas
 
-Power BI Desktop
+3. **Modelado**
+   - Relacionar `Empleados[Fecha_Ingreso]` con `Fecha[Date]`
+   - Crear relación inactiva con `Fecha_Egreso` (activar en medidas con `USERELATIONSHIP`)
+   - Marcar la tabla `Fecha` como tabla de fecha
 
-Excel (fuente de datos simulada con Python)
+4. **Medidas DAX**
+   - Copiar/pegar desde `Pack_Medidas_DAX_RRHH.txt`
+   - Incluye: empleados activos, egresos, rotación, % género, antigüedad promedio, headcount dinámico
 
-DAX básico
-
-📂 Contenido del repositorio:
-
-base_datos_rrhh_simulada.xlsx: archivo con 100 empleados simulados, sus características y trayectoria laboral.
-
-Dashboard_RRHH.pbix: archivo del dashboard en Power BI (¡pronto!).
-
-Capturas del dashboard en PDF o PNG.
-
-💡 ¿Por qué este proyecto?
-
-Porque los datos no reemplazan la intuición humana, pero sí la complementan. Y cuando combinamos experiencia con análisis, se generan ideas que transforman la gestión de personas.
+5. **Visualizaciones**
+   - **Panel 1: Resumen general (KPI cards)**
+     - Total empleados activos
+     - Tasa de rotación
+     - % de género
+     - Antigüedad promedio
+   - **Panel 2: Análisis por área y puesto**
+     - Cantidad de empleados por área (barras)
+     - Promedio de antigüedad por puesto (columnas)
+   - **Panel 3: Egresos y motivos de salida**
+     - Línea: egresos por mes
+     - Barras: motivos de salida
+     - Segmentadores: Año, Área, Género
+   - **Extra**: Mapa por ubicación (empleados por ciudad)
