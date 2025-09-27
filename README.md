@@ -1,4 +1,4 @@
-# 📊 Dashboard de Recursos Humanos en Power BI - Simulación 2025
+# 📊 Dashboard de Recursos Humanos en Power BI
 
 Este proyecto muestra cómo construir un **Dashboard de Recursos Humanos (RRHH)** usando **Power BI** con datos simulados.
 Incluye métricas clave, paneles visuales y buenas prácticas de modelado de datos.
@@ -11,6 +11,9 @@ Incluye métricas clave, paneles visuales y buenas prácticas de modelado de dat
 - `base_datos_rrhh_simulada_1000.xlsx` → Dataset de empleados simulados (1000 registros)
 - `tabla_fechas_calendar.xlsx` → Tabla de fechas (Calendar) para modelado en Power BI
 - `Pack_Medidas_DAX_RRHH.txt` → Medidas DAX listas para copiar en Power BI
+- `modelo_estrella_rrhh.png` → Esquema estrella del modelo de datos
+- `mockup_dashboard_rrhh.png` → Mockup esquemático del dashboard
+- `A_Power_BI_dashboard_titled_Dashboard_de_Indicadores.png` → Mockup visual simulado del dashboard
 
 ---
 
@@ -54,8 +57,10 @@ Incluye métricas clave, paneles visuales y buenas prácticas de modelado de dat
      - Segmentadores: Año, Área, Género
    - **Extra**: Mapa por ubicación (empleados por ciudad)
 
-   ### 🎨 Mockup del Dashboard
-   ![Mockup Dashboard](mockup_dashboard_rrhh.png)
+   ### 🎨 Mockups del Dashboard
+   
+   **Visual (simulación estilo Power BI):**  
+   ![Mockup Visual](A_Power_BI_dashboard_titled_Dashboard_de_Indicadores.png)
 
 
 ## 👨‍💻 Autor
