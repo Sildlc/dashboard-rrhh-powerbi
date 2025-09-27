@@ -60,7 +60,7 @@ Incluye métricas clave, paneles visuales y buenas prácticas de modelado de dat
    ### 🎨 Mockups del Dashboard
    
    **Visual (simulación estilo Power BI):**  
-   ![Mockup Visual](A_Power_BI_dashboard_titled_Dashboard_de_Indicadores.png)
+   ![Mockup Visual](mockupvisual.png)
 
 
 ## 👨‍💻 Autor
